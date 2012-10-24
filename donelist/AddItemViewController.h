@@ -14,13 +14,16 @@
 @end
 
 
-@interface AddItemViewController : UIViewController {
+@interface AddItemViewController : UITableViewController {
     IBOutlet UITextField *doneTextField;
+    IBOutlet UIBarButtonItem *saveButton;
     id <AddItemViewControllerDelegate> delegate;
 }
 - (IBAction)donePushed;
+- (IBAction)doneTextFieldUpdated;
 
 @property (nonatomic, retain) IBOutlet UITextField *doneTextField;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *saveButton;
 @property (nonatomic, retain) id <AddItemViewControllerDelegate> delegate;
 
 @end

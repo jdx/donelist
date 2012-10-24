@@ -16,6 +16,7 @@
 
 @synthesize delegate;
 @synthesize doneTextField;
+@synthesize saveButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,8 +40,13 @@
 }
 
 - (IBAction)donePushed {
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
     [delegate itemAdded:doneTextField.text];
+}
+
+- (IBAction)doneTextFieldUpdated
+{
+    saveButton.enabled = doneTextField.text.length != 0;
 }
 
 @end
