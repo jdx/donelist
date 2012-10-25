@@ -10,7 +10,7 @@
 #import "AddItemViewController.h"
 #import "Item.h"
 
-@interface TaskListViewController : UITableViewController<AddItemViewControllerDelegate>
+@interface TaskListViewController : UITableViewController<AddItemViewControllerDelegate, NSFetchedResultsControllerDelegate>
 {
     NSManagedObjectContext *managedObjectContext;
     NSFetchedResultsController *fetchedResultsController;
@@ -18,10 +18,9 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
-- (void) fetchRecords; 
+- (void) fetchRecords;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSArray *items;
 
 @end

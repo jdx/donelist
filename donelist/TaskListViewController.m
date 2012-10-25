@@ -16,14 +16,10 @@
 
 @synthesize managedObjectContext;
 @synthesize fetchedResultsController;
-@synthesize items;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
     return self;
 }
 
@@ -37,7 +33,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)addNewItem:sender {
@@ -45,21 +40,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+    return [[fetchedResultsController sections] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo name];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return items.count;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    Item *row = [items objectAtIndex:indexPath.item];
+    Item *row = [fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = row.title;
     return cell;
 }
@@ -72,12 +71,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        Item *item = [items objectAtIndex:indexPath.item];
+        Item *item = [fetchedResultsController objectAtIndexPath:indexPath];
         [self.managedObjectContext deleteObject:item];
         [self.managedObjectContext save:nil];
         [self fetchRecords];
-    }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
     }
 }
 
@@ -87,18 +84,7 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    return NO;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -114,6 +100,7 @@
 {
     Item *item = (Item *)[NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:managedObjectContext];
     item.title = title;
+    item.timestamp = [NSDate date];
     [self.managedObjectContext save:nil];
     [self fetchRecords];
 }
@@ -121,14 +108,14 @@
 - (void)fetchRecords
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Item"];
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"title"
-                                                                                     ascending:YES
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"timestamp"
+                                                                                     ascending:NO
                                                                                       selector:@selector(localizedCaseInsensitiveCompare:)]];
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:self.managedObjectContext
-                                                                          sectionNameKeyPath:nil
-                                                                                   cacheName:nil];
-    items = [managedObjectContext executeFetchRequest:request error:nil];
+                                                                          sectionNameKeyPath:@"day"
+                                                                                   cacheName:@"Root"];
+    [fetchedResultsController performFetch:nil];
     [self.tableView reloadData];
 }
 

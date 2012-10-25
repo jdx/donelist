@@ -24,10 +24,10 @@
 		E60E004C1637804E00C79812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00241637804D00C79812 /* Foundation.framework */; };
 		E60E00541637804E00C79812 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60E00521637804E00C79812 /* InfoPlist.strings */; };
 		E60E00571637804E00C79812 /* donelistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E60E00561637804E00C79812 /* donelistTests.m */; };
+		E65F83B11638F3E7003AC2EC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E65F83AF1638F3E7003AC2EC /* Model.xcdatamodeld */; };
+		E65F83B41638F414003AC2EC /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F83B31638F414003AC2EC /* Item.m */; };
 		E6CD553616379DE300F6F661 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CD553516379DE300F6F661 /* AddItemViewController.m */; };
 		E6CD553E1637AC6B00F6F661 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD553D1637AC6B00F6F661 /* CoreData.framework */; };
-		E6CD55411637AD3200F6F661 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6CD553F1637AD3200F6F661 /* Model.xcdatamodeld */; };
-		E6CD55441637AD5500F6F661 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CD55431637AD5500F6F661 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,12 +64,12 @@
 		E60E00531637804E00C79812 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E60E00551637804E00C79812 /* donelistTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = donelistTests.h; sourceTree = "<group>"; };
 		E60E00561637804E00C79812 /* donelistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = donelistTests.m; sourceTree = "<group>"; };
+		E65F83B01638F3E7003AC2EC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E65F83B21638F414003AC2EC /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		E65F83B31638F414003AC2EC /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		E6CD553416379DE300F6F661 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
 		E6CD553516379DE300F6F661 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		E6CD553D1637AC6B00F6F661 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E6CD55401637AD3200F6F661 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		E6CD55421637AD5400F6F661 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		E6CD55431637AD5500F6F661 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,6 @@
 		E60E00281637804D00C79812 /* donelist */ = {
 			isa = PBXGroup;
 			children = (
-				E6CD553F1637AD3200F6F661 /* Model.xcdatamodeld */,
 				E60E00311637804D00C79812 /* AppDelegate.h */,
 				E60E00321637804D00C79812 /* AppDelegate.m */,
 				E60E003A1637804E00C79812 /* MainStoryboard_iPhone.storyboard */,
@@ -141,8 +140,9 @@
 				E6016C08163785CC00EA6F34 /* TaskListViewController.m */,
 				E6CD553416379DE300F6F661 /* AddItemViewController.h */,
 				E6CD553516379DE300F6F661 /* AddItemViewController.m */,
-				E6CD55421637AD5400F6F661 /* Item.h */,
-				E6CD55431637AD5500F6F661 /* Item.m */,
+				E65F83AF1638F3E7003AC2EC /* Model.xcdatamodeld */,
+				E65F83B21638F414003AC2EC /* Item.h */,
+				E65F83B31638F414003AC2EC /* Item.m */,
 			);
 			path = donelist;
 			sourceTree = "<group>";
@@ -295,8 +295,8 @@
 				E60E00331637804D00C79812 /* AppDelegate.m in Sources */,
 				E6016C09163785CC00EA6F34 /* TaskListViewController.m in Sources */,
 				E6CD553616379DE300F6F661 /* AddItemViewController.m in Sources */,
-				E6CD55411637AD3200F6F661 /* Model.xcdatamodeld in Sources */,
-				E6CD55441637AD5500F6F661 /* Item.m in Sources */,
+				E65F83B11638F3E7003AC2EC /* Model.xcdatamodeld in Sources */,
+				E65F83B41638F414003AC2EC /* Item.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,14 +495,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E6CD553F1637AD3200F6F661 /* Model.xcdatamodeld */ = {
+		E65F83AF1638F3E7003AC2EC /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E6CD55401637AD3200F6F661 /* Model.xcdatamodel */,
+				E65F83B01638F3E7003AC2EC /* Model.xcdatamodel */,
 			);
-			currentVersion = E6CD55401637AD3200F6F661 /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
+			currentVersion = E65F83B01638F3E7003AC2EC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
