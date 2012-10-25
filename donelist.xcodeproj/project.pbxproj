@@ -26,6 +26,9 @@
 		E60E00571637804E00C79812 /* donelistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E60E00561637804E00C79812 /* donelistTests.m */; };
 		E65F83B11638F3E7003AC2EC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E65F83AF1638F3E7003AC2EC /* Model.xcdatamodeld */; };
 		E65F83B41638F414003AC2EC /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F83B31638F414003AC2EC /* Item.m */; };
+		E66E1C591639052C008F43DD /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C581639052C008F43DD /* icon2x.png */; };
+		E66E1C5C16390541008F43DD /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C5B16390541008F43DD /* icon57.png */; };
+		E66E1C5E16390569008F43DD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C5D16390569008F43DD /* Default.png */; };
 		E6CD553616379DE300F6F661 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CD553516379DE300F6F661 /* AddItemViewController.m */; };
 		E6CD553E1637AC6B00F6F661 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD553D1637AC6B00F6F661 /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +70,9 @@
 		E65F83B01638F3E7003AC2EC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E65F83B21638F414003AC2EC /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		E65F83B31638F414003AC2EC /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		E66E1C581639052C008F43DD /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
+		E66E1C5B16390541008F43DD /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
+		E66E1C5D16390569008F43DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E6CD553416379DE300F6F661 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
 		E6CD553516379DE300F6F661 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		E6CD553D1637AC6B00F6F661 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -100,6 +106,9 @@
 		E60E00131637804D00C79812 = {
 			isa = PBXGroup;
 			children = (
+				E66E1C5D16390569008F43DD /* Default.png */,
+				E66E1C5B16390541008F43DD /* icon57.png */,
+				E66E1C581639052C008F43DD /* icon2x.png */,
 				E6CD553D1637AC6B00F6F661 /* CoreData.framework */,
 				E60E00281637804D00C79812 /* donelist */,
 				E60E004F1637804E00C79812 /* donelistTests */,
@@ -257,6 +266,9 @@
 				E60E00391637804E00C79812 /* Default-568h@2x.png in Resources */,
 				E60E003C1637804E00C79812 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E60E003F1637804E00C79812 /* MainStoryboard_iPad.storyboard in Resources */,
+				E66E1C591639052C008F43DD /* icon2x.png in Resources */,
+				E66E1C5C16390541008F43DD /* icon57.png in Resources */,
+				E66E1C5E16390569008F43DD /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
