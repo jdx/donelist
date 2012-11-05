@@ -28,9 +28,9 @@
 		E65F83B41638F414003AC2EC /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F83B31638F414003AC2EC /* Item.m */; };
 		E66E1C591639052C008F43DD /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C581639052C008F43DD /* icon2x.png */; };
 		E66E1C5C16390541008F43DD /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C5B16390541008F43DD /* icon57.png */; };
-		E66E1C5E16390569008F43DD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C5D16390569008F43DD /* Default.png */; };
 		E6CD553616379DE300F6F661 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CD553516379DE300F6F661 /* AddItemViewController.m */; };
 		E6CD553E1637AC6B00F6F661 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD553D1637AC6B00F6F661 /* CoreData.framework */; };
+		E6EC89C41647231700DB8F78 /* DayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC89C31647231700DB8F78 /* DayListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +46,14 @@
 /* Begin PBXFileReference section */
 		E6016C07163785CC00EA6F34 /* TaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListViewController.h; sourceTree = "<group>"; };
 		E6016C08163785CC00EA6F34 /* TaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListViewController.m; sourceTree = "<group>"; };
-		E60E001E1637804D00C79812 /* donelist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = donelist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E001E1637804D00C79812 /* 110.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 110.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E00221637804D00C79812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E60E00241637804D00C79812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E60E00261637804D00C79812 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E60E002A1637804D00C79812 /* donelist-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "donelist-Info.plist"; sourceTree = "<group>"; };
+		E60E002A1637804D00C79812 /* 110-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "110-Info.plist"; sourceTree = "<group>"; };
 		E60E002C1637804D00C79812 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E60E002E1637804D00C79812 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E60E00301637804D00C79812 /* donelist-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "donelist-Prefix.pch"; sourceTree = "<group>"; };
+		E60E00301637804D00C79812 /* 110-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "110-Prefix.pch"; sourceTree = "<group>"; };
 		E60E00311637804D00C79812 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E60E00321637804D00C79812 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E60E00341637804D00C79812 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 		E60E00381637804E00C79812 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E60E003B1637804E00C79812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		E60E003E1637804E00C79812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		E60E00481637804E00C79812 /* donelistTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = donelistTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60E00481637804E00C79812 /* 110Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 110Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E00491637804E00C79812 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E60E00511637804E00C79812 /* donelistTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "donelistTests-Info.plist"; sourceTree = "<group>"; };
+		E60E00511637804E00C79812 /* 110Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "110Tests-Info.plist"; sourceTree = "<group>"; };
 		E60E00531637804E00C79812 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E60E00551637804E00C79812 /* donelistTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = donelistTests.h; sourceTree = "<group>"; };
 		E60E00561637804E00C79812 /* donelistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = donelistTests.m; sourceTree = "<group>"; };
@@ -76,6 +76,8 @@
 		E6CD553416379DE300F6F661 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
 		E6CD553516379DE300F6F661 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		E6CD553D1637AC6B00F6F661 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E6EC89C21647231700DB8F78 /* DayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayListViewController.h; sourceTree = "<group>"; };
+		E6EC89C31647231700DB8F78 /* DayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +122,8 @@
 		E60E001F1637804D00C79812 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E60E001E1637804D00C79812 /* donelist.app */,
-				E60E00481637804E00C79812 /* donelistTests.octest */,
+				E60E001E1637804D00C79812 /* 110.app */,
+				E60E00481637804E00C79812 /* 110Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +154,8 @@
 				E65F83AF1638F3E7003AC2EC /* Model.xcdatamodeld */,
 				E65F83B21638F414003AC2EC /* Item.h */,
 				E65F83B31638F414003AC2EC /* Item.m */,
+				E6EC89C21647231700DB8F78 /* DayListViewController.h */,
+				E6EC89C31647231700DB8F78 /* DayListViewController.m */,
 			);
 			path = donelist;
 			sourceTree = "<group>";
@@ -159,10 +163,10 @@
 		E60E00291637804D00C79812 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E60E002A1637804D00C79812 /* donelist-Info.plist */,
+				E60E002A1637804D00C79812 /* 110-Info.plist */,
 				E60E002B1637804D00C79812 /* InfoPlist.strings */,
 				E60E002E1637804D00C79812 /* main.m */,
-				E60E00301637804D00C79812 /* donelist-Prefix.pch */,
+				E60E00301637804D00C79812 /* 110-Prefix.pch */,
 				E60E00341637804D00C79812 /* Default.png */,
 				E60E00361637804D00C79812 /* Default@2x.png */,
 				E60E00381637804E00C79812 /* Default-568h@2x.png */,
@@ -183,7 +187,7 @@
 		E60E00501637804E00C79812 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E60E00511637804E00C79812 /* donelistTests-Info.plist */,
+				E60E00511637804E00C79812 /* 110Tests-Info.plist */,
 				E60E00521637804E00C79812 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -192,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E60E001D1637804D00C79812 /* donelist */ = {
+		E60E001D1637804D00C79812 /* 110 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E60E005A1637804E00C79812 /* Build configuration list for PBXNativeTarget "donelist" */;
+			buildConfigurationList = E60E005A1637804E00C79812 /* Build configuration list for PBXNativeTarget "110" */;
 			buildPhases = (
 				E60E001A1637804D00C79812 /* Sources */,
 				E60E001B1637804D00C79812 /* Frameworks */,
@@ -204,14 +208,14 @@
 			);
 			dependencies = (
 			);
-			name = donelist;
+			name = 110;
 			productName = donelist;
-			productReference = E60E001E1637804D00C79812 /* donelist.app */;
+			productReference = E60E001E1637804D00C79812 /* 110.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E60E00471637804E00C79812 /* donelistTests */ = {
+		E60E00471637804E00C79812 /* 110Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E60E005D1637804E00C79812 /* Build configuration list for PBXNativeTarget "donelistTests" */;
+			buildConfigurationList = E60E005D1637804E00C79812 /* Build configuration list for PBXNativeTarget "110Tests" */;
 			buildPhases = (
 				E60E00431637804E00C79812 /* Sources */,
 				E60E00441637804E00C79812 /* Frameworks */,
@@ -223,9 +227,9 @@
 			dependencies = (
 				E60E004E1637804E00C79812 /* PBXTargetDependency */,
 			);
-			name = donelistTests;
+			name = 110Tests;
 			productName = donelistTests;
-			productReference = E60E00481637804E00C79812 /* donelistTests.octest */;
+			productReference = E60E00481637804E00C79812 /* 110Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +241,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = dickeyxxx;
 			};
-			buildConfigurationList = E60E00181637804D00C79812 /* Build configuration list for PBXProject "donelist" */;
+			buildConfigurationList = E60E00181637804D00C79812 /* Build configuration list for PBXProject "110" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -249,8 +253,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E60E001D1637804D00C79812 /* donelist */,
-				E60E00471637804E00C79812 /* donelistTests */,
+				E60E001D1637804D00C79812 /* 110 */,
+				E60E00471637804E00C79812 /* 110Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +272,6 @@
 				E60E003F1637804E00C79812 /* MainStoryboard_iPad.storyboard in Resources */,
 				E66E1C591639052C008F43DD /* icon2x.png in Resources */,
 				E66E1C5C16390541008F43DD /* icon57.png in Resources */,
-				E66E1C5E16390569008F43DD /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +312,7 @@
 				E6CD553616379DE300F6F661 /* AddItemViewController.m in Sources */,
 				E65F83B11638F3E7003AC2EC /* Model.xcdatamodeld in Sources */,
 				E65F83B41638F414003AC2EC /* Item.m in Sources */,
+				E6EC89C41647231700DB8F78 /* DayListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +329,7 @@
 /* Begin PBXTargetDependency section */
 		E60E004E1637804E00C79812 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E60E001D1637804D00C79812 /* donelist */;
+			target = E60E001D1637804D00C79812 /* 110 */;
 			targetProxy = E60E004D1637804E00C79812 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -422,9 +426,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "donelist/donelist-Prefix.pch";
-				INFOPLIST_FILE = "donelist/donelist-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "donelist/110-Prefix.pch";
+				INFOPLIST_FILE = "donelist/110-Info.plist";
+				PRODUCT_NAME = 110;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -433,9 +437,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "donelist/donelist-Prefix.pch";
-				INFOPLIST_FILE = "donelist/donelist-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "donelist/110-Prefix.pch";
+				INFOPLIST_FILE = "donelist/110-Info.plist";
+				PRODUCT_NAME = 110;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -450,8 +454,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "donelist/donelist-Prefix.pch";
-				INFOPLIST_FILE = "donelistTests/donelistTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "donelistTests/110Tests-Info.plist";
+				PRODUCT_NAME = 110Tests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -467,8 +471,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "donelist/donelist-Prefix.pch";
-				INFOPLIST_FILE = "donelistTests/donelistTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "donelistTests/110Tests-Info.plist";
+				PRODUCT_NAME = 110Tests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -477,7 +481,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E60E00181637804D00C79812 /* Build configuration list for PBXProject "donelist" */ = {
+		E60E00181637804D00C79812 /* Build configuration list for PBXProject "110" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E60E00581637804E00C79812 /* Debug */,
@@ -486,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E60E005A1637804E00C79812 /* Build configuration list for PBXNativeTarget "donelist" */ = {
+		E60E005A1637804E00C79812 /* Build configuration list for PBXNativeTarget "110" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E60E005B1637804E00C79812 /* Debug */,
@@ -495,7 +499,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E60E005D1637804E00C79812 /* Build configuration list for PBXNativeTarget "donelistTests" */ = {
+		E60E005D1637804E00C79812 /* Build configuration list for PBXNativeTarget "110Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E60E005E1637804E00C79812 /* Debug */,

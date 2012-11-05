@@ -16,7 +16,7 @@
 
 - (NSString *)day {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateStyle = NSDateFormatterFullStyle;
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
     
     return [dateFormatter stringFromDate:self.timestamp];
 }

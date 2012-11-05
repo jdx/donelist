@@ -16,6 +16,7 @@
 
 @synthesize managedObjectContext;
 @synthesize fetchedResultsController;
+@synthesize day;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,8 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     [self fetchRecords];
+    self.title = self.day;
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,22 +36,14 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)addNewItem:sender {
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [[fetchedResultsController sections] count];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo name];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:0];
     return [sectionInfo numberOfObjects];
 }
 
@@ -76,10 +69,6 @@
         [self.managedObjectContext save:nil];
         [self fetchRecords];
     }
-}
-
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath

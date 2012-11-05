@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="V6W-D2-qaL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="V6W-D2-qaL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -12,12 +12,45 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="oQ0-3f-hjr" kind="relationship" relationship="rootViewController" id="2AA-Pf-YZW"/>
+                        <segue destination="GHv-Of-xuA" kind="relationship" relationship="rootViewController" id="MRP-da-AUx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FN-fE-h9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="245" y="-609"/>
+        </scene>
+        <!--Day List View Controller - Days-->
+        <scene sceneID="4IE-JF-BgW">
+            <objects>
+                <tableViewController id="GHv-Of-xuA" customClass="DayListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ef7-SO-8vz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="sLf-NZ-cdj">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GHv-Of-xuA" id="L0Z-Oq-nfk"/>
+                            <outlet property="delegate" destination="GHv-Of-xuA" id="V4b-10-fPh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Days" id="Ar3-bk-jBf"/>
+                    <connections>
+                        <segue destination="oQ0-3f-hjr" kind="push" identifier="selectDay" id="M5r-H8-MJx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EIq-KB-3xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="-589"/>
         </scene>
         <!--Task List View Controller - DoneList-->
         <scene sceneID="jJC-cn-gaI">
@@ -51,7 +84,8 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Tasks" id="U7H-En-1OM"/>
-                    <navigationItem key="navigationItem" title="Done List" id="qq6-8A-4NH">
+                    <navigationItem key="navigationItem" title="Current Day" id="qq6-8A-4NH">
+                        <barButtonItem key="backBarButtonItem" title="Days" id="CtN-fy-gBe"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vkq-4F-Dbm">
                             <connections>
                                 <segue destination="qAM-j2-koK" kind="push" identifier="addItem" id="zba-0g-SIy"/>
@@ -61,7 +95,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJB-qR-0e1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="-609"/>
+            <point key="canvasLocation" x="1523" y="-609"/>
         </scene>
         <!--Add Item View Controller - Add done task-->
         <scene sceneID="lYO-qQ-wS6">
@@ -122,7 +156,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aS-EM-OR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="-609"/>
+            <point key="canvasLocation" x="2050" y="-609"/>
         </scene>
     </scenes>
     <classes>
@@ -134,6 +168,9 @@
                 <relationship kind="outlet" name="doneTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
             </relationships>
+        </class>
+        <class className="DayListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayListViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

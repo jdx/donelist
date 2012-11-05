@@ -1,13 +1,16 @@
-//
-//  DayListViewController.h
-//  110
-//
-//  Created by Jeff Dickey on 11/4/12.
-//  Copyright (c) 2012 dickeyxxx. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+#import "Item.h"
+#import "TaskListViewController.h"
 
 @interface DayListViewController : UITableViewController
+{
+    NSManagedObjectContext *managedObjectContext;
+    NSFetchedResultsController *fetchedResultsController;
+}
+
+- (void) fetchRecords;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
