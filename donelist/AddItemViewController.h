@@ -13,14 +13,14 @@
 - (void)itemAdded:(NSString *)item;
 @end
 
-
-@interface AddItemViewController : UITableViewController {
+@interface AddItemViewController : UITableViewController<UITextFieldDelegate> {
     IBOutlet UITextField *doneTextField;
     IBOutlet UIBarButtonItem *saveButton;
     id <AddItemViewControllerDelegate> delegate;
 }
 - (IBAction)donePushed;
 - (IBAction)doneTextFieldUpdated;
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
 
 @property (nonatomic, retain) IBOutlet UITextField *doneTextField;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *saveButton;

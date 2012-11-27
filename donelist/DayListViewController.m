@@ -52,8 +52,23 @@
         Item *item = [self.fetchedResultsController objectAtIndexPath:[self.tableView indexPathForSelectedRow]];
         TaskListViewController *taskListVC = [segue destinationViewController];
         taskListVC.managedObjectContext = self.managedObjectContext;
+        taskListVC.delegate = self;
         taskListVC.day = item.day;
     }
+    else if ([[segue identifier] isEqualToString:@"addItem"])
+    {
+        AddItemViewController *addItemViewController = [segue destinationViewController];
+        addItemViewController.delegate = self;
+    }
+}
+
+- (void)itemAdded:(NSString *)title
+{
+    Item *item = (Item *)[NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:managedObjectContext];
+    item.title = title;
+    item.timestamp = [NSDate date];
+    [self.managedObjectContext save:nil];
+    [self fetchRecords];
 }
 
 - (void)fetchRecords
@@ -68,6 +83,11 @@
                                                                                    cacheName:@"Rows"];
     [fetchedResultsController performFetch:nil];
     [self.tableView reloadData];
+}
+
+- (void)taskListViewClosed
+{
+    [self fetchRecords];
 }
 
 @end

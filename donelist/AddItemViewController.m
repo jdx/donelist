@@ -49,4 +49,10 @@
     saveButton.enabled = doneTextField.text.length != 0;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self donePushed];
+    return YES;
+}
+
 @end

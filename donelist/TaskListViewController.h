@@ -7,21 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddItemViewController.h"
 #import "Item.h"
 
-@interface TaskListViewController : UITableViewController<AddItemViewControllerDelegate>
+@protocol TaskListViewDelegate
+@required
+- (void)taskListViewClosed;
+@end
+
+@interface TaskListViewController : UITableViewController
 {
     NSManagedObjectContext *managedObjectContext;
     NSFetchedResultsController *fetchedResultsController;
     NSString *day;
+    id <TaskListViewDelegate> delegate;
 }
 
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 - (void) fetchRecords;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSString *day;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) id <TaskListViewDelegate> delegate;
 
 @end

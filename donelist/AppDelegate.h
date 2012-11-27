@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NXOAuth2.h"
+#import <RestKit/RestKit.h>
+#import "TaskListViewController.h"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

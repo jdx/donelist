@@ -28,12 +28,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="sLf-NZ-cdj">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Kf8-hq-fxh" style="IBUITableViewCellStyleDefault" id="sLf-NZ-cdj">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf8-hq-fxh">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -43,7 +50,13 @@
                             <outlet property="delegate" destination="GHv-Of-xuA" id="V4b-10-fPh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Days" id="Ar3-bk-jBf"/>
+                    <navigationItem key="navigationItem" title="Days" id="Ar3-bk-jBf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4OL-3A-ARn">
+                            <connections>
+                                <segue destination="qAM-j2-koK" kind="push" identifier="addItem" id="bfp-II-7wY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="oQ0-3f-hjr" kind="push" identifier="selectDay" id="M5r-H8-MJx"/>
                     </connections>
@@ -86,16 +99,11 @@
                     <tabBarItem key="tabBarItem" title="Tasks" id="U7H-En-1OM"/>
                     <navigationItem key="navigationItem" title="Current Day" id="qq6-8A-4NH">
                         <barButtonItem key="backBarButtonItem" title="Days" id="CtN-fy-gBe"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vkq-4F-Dbm">
-                            <connections>
-                                <segue destination="qAM-j2-koK" kind="push" identifier="addItem" id="zba-0g-SIy"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJB-qR-0e1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1523" y="-609"/>
+            <point key="canvasLocation" x="1431" y="-589"/>
         </scene>
         <!--Add Item View Controller - Add done task-->
         <scene sceneID="lYO-qQ-wS6">
@@ -121,9 +129,10 @@
                                                         <constraint firstAttribute="height" constant="43" id="TSC-nL-jOi"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="doneTextFieldUpdated" destination="qAM-j2-koK" eventType="editingChanged" id="r5z-0q-1zg"/>
+                                                        <outlet property="delegate" destination="qAM-j2-koK" id="yVg-cp-gxh"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -156,29 +165,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aS-EM-OR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2050" y="-609"/>
+            <point key="canvasLocation" x="1431" y="111"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddItemViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddItemViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="donePushed"/>
-                <relationship kind="action" name="doneTextFieldUpdated"/>
-                <relationship kind="outlet" name="doneTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="DayListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayListViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="TaskListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskListViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

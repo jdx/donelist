@@ -17,6 +17,7 @@
 @synthesize managedObjectContext;
 @synthesize fetchedResultsController;
 @synthesize day;
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -43,6 +44,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if ([[fetchedResultsController sections] count] == 0) {
+        [self.navigationController popViewControllerAnimated:YES];
+        [delegate taskListViewClosed];
+        return 0;
+    }
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:0];
     return [sectionInfo numberOfObjects];
 }
@@ -74,24 +80,6 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return NO;
-}
-
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"addItem"])
-    {
-        AddItemViewController *addItemViewController = [segue destinationViewController];
-        addItemViewController.delegate = self;
-    }
-}
-
-- (void)itemAdded:(NSString *)title
-{
-    Item *item = (Item *)[NSEntityDescription insertNewObjectForEntityForName:@"Item" inManagedObjectContext:managedObjectContext];
-    item.title = title;
-    item.timestamp = [NSDate date];
-    [self.managedObjectContext save:nil];
-    [self fetchRecords];
 }
 
 - (void)fetchRecords
