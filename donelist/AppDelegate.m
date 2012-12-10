@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
 
 @synthesize managedObjectContext;
@@ -17,14 +18,6 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     TaskListViewController *controller = [[navigationController viewControllers] objectAtIndex:0];
     controller.managedObjectContext = self.managedObjectContext;
-    [[NXOAuth2AccountStore sharedStore] setClientID:@"390bc9941d98c7f5d87f5c3364f95d0672e02767ceb53a8767ff38971fe99020"
-             secret:@"5f00bafd7d5390cfa5932f3e0bab2d7896aafea1c3e6d53339b2aa3b73fe4dca"
-   authorizationURL:[NSURL URLWithString:@"http://127.0.0.1:3000/oauth/authorize"]
-           tokenURL:[NSURL URLWithString:@"http://127.0.0.1:3000/oauth/token"]
-        redirectURL:[NSURL URLWithString:@"oneten://oauth"]
-     forAccountType:@"oneten"];
-    RKURL *baseURL = [RKURL URLWithString:@"http://127.0.0.1:3000"];
-    [RKClient clientWithBaseURL:baseURL];
     return YES;
 }
 							

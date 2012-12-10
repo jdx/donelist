@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E6016C09163785CC00EA6F34 /* TaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6016C08163785CC00EA6F34 /* TaskListViewController.m */; };
+		E6070D4D1675704700DB3697 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6070D4C1675704700DB3697 /* Security.framework */; };
+		E6070D51167570E200DB3697 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6070D50167570E200DB3697 /* KeychainItemWrapper.m */; };
+		E6070D5416757E2E00DB3697 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = E6070D5316757E2E00DB3697 /* Task.m */; };
 		E60E00231637804D00C79812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00221637804D00C79812 /* UIKit.framework */; };
 		E60E00251637804D00C79812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00241637804D00C79812 /* Foundation.framework */; };
 		E60E00271637804D00C79812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00261637804D00C79812 /* CoreGraphics.framework */; };
@@ -28,6 +31,8 @@
 		E65F83B41638F414003AC2EC /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E65F83B31638F414003AC2EC /* Item.m */; };
 		E66E1C591639052C008F43DD /* icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C581639052C008F43DD /* icon2x.png */; };
 		E66E1C5C16390541008F43DD /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = E66E1C5B16390541008F43DD /* icon57.png */; };
+		E6BED7EE1675651700E9C2C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BED7ED1675651700E9C2C3 /* libPods.a */; };
+		E6BED7F11675669E00E9C2C3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BED7F01675669E00E9C2C3 /* LoginViewController.m */; };
 		E6CD553616379DE300F6F661 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CD553516379DE300F6F661 /* AddItemViewController.m */; };
 		E6CD553E1637AC6B00F6F661 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CD553D1637AC6B00F6F661 /* CoreData.framework */; };
 		E6EC89C41647231700DB8F78 /* DayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EC89C31647231700DB8F78 /* DayListViewController.m */; };
@@ -44,8 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		503AD56633374318966E09CA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D32227B84D2D49128463633B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6016C07163785CC00EA6F34 /* TaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListViewController.h; sourceTree = "<group>"; };
 		E6016C08163785CC00EA6F34 /* TaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListViewController.m; sourceTree = "<group>"; };
+		E6070D4C1675704700DB3697 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E6070D4F167570E200DB3697 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
+		E6070D50167570E200DB3697 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
+		E6070D5216757E2E00DB3697 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		E6070D5316757E2E00DB3697 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		E60E001E1637804D00C79812 /* 110.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 110.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E00221637804D00C79812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E60E00241637804D00C79812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +85,9 @@
 		E66E1C581639052C008F43DD /* icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2x.png; sourceTree = "<group>"; };
 		E66E1C5B16390541008F43DD /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
 		E66E1C5D16390569008F43DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E6BED7ED1675651700E9C2C3 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Release-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		E6BED7EF1675669E00E9C2C3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E6BED7F01675669E00E9C2C3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E6CD553416379DE300F6F661 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
 		E6CD553516379DE300F6F661 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		E6CD553D1637AC6B00F6F661 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -85,10 +100,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6070D4D1675704700DB3697 /* Security.framework in Frameworks */,
 				E6CD553E1637AC6B00F6F661 /* CoreData.framework in Frameworks */,
 				E60E00231637804D00C79812 /* UIKit.framework in Frameworks */,
 				E60E00251637804D00C79812 /* Foundation.framework in Frameworks */,
 				E60E00271637804D00C79812 /* CoreGraphics.framework in Frameworks */,
+				E6BED7EE1675651700E9C2C3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +125,8 @@
 		E60E00131637804D00C79812 = {
 			isa = PBXGroup;
 			children = (
+				E6070D4C1675704700DB3697 /* Security.framework */,
+				E6BED7ED1675651700E9C2C3 /* libPods.a */,
 				E66E1C5D16390569008F43DD /* Default.png */,
 				E66E1C5B16390541008F43DD /* icon57.png */,
 				E66E1C581639052C008F43DD /* icon2x.png */,
@@ -116,6 +135,7 @@
 				E60E004F1637804E00C79812 /* donelistTests */,
 				E60E00211637804D00C79812 /* Frameworks */,
 				E60E001F1637804D00C79812 /* Products */,
+				503AD56633374318966E09CA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +155,7 @@
 				E60E00241637804D00C79812 /* Foundation.framework */,
 				E60E00261637804D00C79812 /* CoreGraphics.framework */,
 				E60E00491637804E00C79812 /* SenTestingKit.framework */,
+				D32227B84D2D49128463633B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +163,8 @@
 		E60E00281637804D00C79812 /* donelist */ = {
 			isa = PBXGroup;
 			children = (
+				E6070D4F167570E200DB3697 /* KeychainItemWrapper.h */,
+				E6070D50167570E200DB3697 /* KeychainItemWrapper.m */,
 				E60E00311637804D00C79812 /* AppDelegate.h */,
 				E60E00321637804D00C79812 /* AppDelegate.m */,
 				E60E003A1637804E00C79812 /* MainStoryboard_iPhone.storyboard */,
@@ -156,6 +179,10 @@
 				E65F83B31638F414003AC2EC /* Item.m */,
 				E6EC89C21647231700DB8F78 /* DayListViewController.h */,
 				E6EC89C31647231700DB8F78 /* DayListViewController.m */,
+				E6BED7EF1675669E00E9C2C3 /* LoginViewController.h */,
+				E6BED7F01675669E00E9C2C3 /* LoginViewController.m */,
+				E6070D5216757E2E00DB3697 /* Task.h */,
+				E6070D5316757E2E00DB3697 /* Task.m */,
 			);
 			path = donelist;
 			sourceTree = "<group>";
@@ -203,6 +230,7 @@
 				E60E001A1637804D00C79812 /* Sources */,
 				E60E001B1637804D00C79812 /* Frameworks */,
 				E60E001C1637804D00C79812 /* Resources */,
+				E30D709E4A3A4BE1B1F742A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +314,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E30D709E4A3A4BE1B1F742A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		E60E00461637804E00C79812 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,6 +355,9 @@
 				E65F83B11638F3E7003AC2EC /* Model.xcdatamodeld in Sources */,
 				E65F83B41638F414003AC2EC /* Item.m in Sources */,
 				E6EC89C41647231700DB8F78 /* DayListViewController.m in Sources */,
+				E6BED7F11675669E00E9C2C3 /* LoginViewController.m in Sources */,
+				E6070D51167570E200DB3697 /* KeychainItemWrapper.m in Sources */,
+				E6070D5416757E2E00DB3697 /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +469,7 @@
 		};
 		E60E005B1637804E00C79812 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503AD56633374318966E09CA /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "donelist/110-Prefix.pch";
@@ -435,6 +481,7 @@
 		};
 		E60E005C1637804E00C79812 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503AD56633374318966E09CA /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "donelist/110-Prefix.pch";

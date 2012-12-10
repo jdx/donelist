@@ -12,12 +12,80 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GHv-Of-xuA" kind="relationship" relationship="rootViewController" id="MRP-da-AUx"/>
+                        <segue destination="5W1-Ao-EZQ" kind="relationship" relationship="rootViewController" id="b4L-VR-Hth"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7FN-fE-h9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="-609"/>
+            <point key="canvasLocation" x="19" y="-607"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="pFV-Pn-jPQ">
+            <objects>
+                <viewController id="5W1-Ao-EZQ" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mz4-pV-nlW">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu7-lr-9et">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dej-4P-L9S">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5W1-Ao-EZQ" id="0uw-sG-2UJ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eFJ-F4-e3X">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5W1-Ao-EZQ" id="buC-Z3-5RV"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jb-E8-FSu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPushed" destination="5W1-Ao-EZQ" eventType="touchUpInside" id="pIY-84-Qyc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5jb-E8-FSu" firstAttribute="leading" secondItem="mz4-pV-nlW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="93V-kE-mwk"/>
+                            <constraint firstItem="dej-4P-L9S" firstAttribute="leading" secondItem="mz4-pV-nlW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A2Q-De-IqV"/>
+                            <constraint firstItem="eFJ-F4-e3X" firstAttribute="leading" secondItem="mz4-pV-nlW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="G7S-Wu-IbQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Qu7-lr-9et" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Nee-xc-DX9"/>
+                            <constraint firstItem="eFJ-F4-e3X" firstAttribute="top" secondItem="dej-4P-L9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TwQ-VY-vVT"/>
+                            <constraint firstItem="Qu7-lr-9et" firstAttribute="leading" secondItem="mz4-pV-nlW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="USx-OF-kpa"/>
+                            <constraint firstAttribute="trailing" secondItem="5jb-E8-FSu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ysg-be-H8z"/>
+                            <constraint firstAttribute="trailing" secondItem="eFJ-F4-e3X" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="buc-hn-zLw"/>
+                            <constraint firstItem="Qu7-lr-9et" firstAttribute="top" secondItem="mz4-pV-nlW" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cY3-Ha-XwR"/>
+                            <constraint firstItem="dej-4P-L9S" firstAttribute="top" secondItem="Qu7-lr-9et" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="esq-ET-GJ3"/>
+                            <constraint firstAttribute="trailing" secondItem="dej-4P-L9S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iF8-Hf-OqT"/>
+                            <constraint firstItem="5jb-E8-FSu" firstAttribute="top" secondItem="eFJ-F4-e3X" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nl0-xW-iKe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uid-NX-YRb"/>
+                    <connections>
+                        <outlet property="passwordField" destination="eFJ-F4-e3X" id="umK-uc-2Yz"/>
+                        <outlet property="usernameField" destination="dej-4P-L9S" id="0lG-CA-ehg"/>
+                        <segue destination="GHv-Of-xuA" kind="push" identifier="showDashboard" id="BPL-wO-M4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAM-4O-Z0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="-607"/>
         </scene>
         <!--Day List View Controller - Days-->
         <scene sceneID="4IE-JF-BgW">
@@ -63,7 +131,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIq-KB-3xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="-589"/>
+            <point key="canvasLocation" x="896" y="-607"/>
         </scene>
         <!--Task List View Controller - DoneList-->
         <scene sceneID="jJC-cn-gaI">
@@ -103,7 +171,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJB-qR-0e1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="-589"/>
+            <point key="canvasLocation" x="1431" y="-607"/>
         </scene>
         <!--Add Item View Controller - Add done task-->
         <scene sceneID="lYO-qQ-wS6">
@@ -165,9 +233,37 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aS-EM-OR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="111"/>
+            <point key="canvasLocation" x="1431" y="85"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AddItemViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddItemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="donePushed"/>
+                <relationship kind="action" name="doneTextFieldUpdated"/>
+                <relationship kind="outlet" name="doneTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="DayListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DayListViewController.h"/>
+        </class>
+        <class className="LoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginPushed"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TaskListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskListViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
