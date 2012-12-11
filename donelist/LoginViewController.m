@@ -14,7 +14,6 @@
 
 @implementation LoginViewController
 
-@synthesize managedObjectContext;
 @synthesize usernameField;
 @synthesize passwordField;
 
@@ -23,6 +22,7 @@
     [super viewDidLoad];
     usernameField.text = [self.keyWrapper objectForKey:(__bridge id)kSecAttrAccount];
     passwordField.text = [self.keyWrapper objectForKey:(__bridge id)kSecValueData];
+    [self loginPushed];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -38,16 +38,13 @@
 
 - (IBAction)loginPushed
 {
-    NSString *clientID = @"49cdcfa11fc03c08c79a509277e5e3cd6e04a9a5e2dd26c008d100cd5d1de8aa";
-    NSString *clientSecret= @"2694065de13fe87f6350965ed0de6e91f53ac648ab9c7bbaade9ae29a4baa9c0";
-    NSURL *tokenUrl = [NSURL URLWithString:@"http://110.dickey.xxx/oauth/token"];
+    NSURL *tokenUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@/oauth/token", [Constants hostname]]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:tokenUrl];
     request.HTTPMethod = @"POST";
-    NSString *params = [NSString stringWithFormat:@"grant_type=password&username=%@&password=%@&client_id=%@&client_secret=%@", usernameField.text, passwordField.text, clientID, clientSecret];
+    NSString *params = [NSString stringWithFormat:@"grant_type=password&username=%@&password=%@&client_id=%@&client_secret=%@", usernameField.text, passwordField.text, [Constants key], [Constants secret]];
     request.HTTPBody = [params dataUsingEncoding:NSUTF8StringEncoding];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         accessToken = [JSON objectForKey:@"access_token"];
-        [self getShit];
         [self.keyWrapper setObject:usernameField.text forKey:(__bridge id)kSecAttrAccount];
         [self.keyWrapper setObject:passwordField.text forKey:(__bridge id)kSecValueData];
         [self performSegueWithIdentifier:@"showDashboard" sender:self];
@@ -61,8 +58,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    id vc = [segue destinationViewController];
-    [vc setManagedObjectContext:self.managedObjectContext];
+    DayListPageViewController *vc = [segue destinationViewController];
+    vc.accessToken = self.accessToken;
 }
 
 - (KeychainItemWrapper *)keyWrapper
@@ -78,27 +75,6 @@
     return accessToken;
 }
 
-- (void)getShit
-{
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Task class]];
-    [mapping addAttributeMappingsFromArray:@[@"title"]];
-    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
-    
-    RKResponseDescriptor *taskDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:nil keyPath:@"tasks" statusCodes:statusCodes];
-    
-    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://110.dickey.xxx"]];
-    
-    [manager addResponseDescriptorsFromArray:@[ taskDescriptor ]];
-    
-    NSDictionary *params = @{ @"access_token": self.accessToken };
-    [manager getObjectsAtPath:@"/api/tasks.json" parameters:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        Task *task = [[mappingResult array] objectAtIndex:0];
-        NSLog(@"Mapped the task: %@", task.title);
-        NSLog(@"tasks: %@", [mappingResult array]);
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"Failed with error: %@", [error localizedDescription]);
-    }];
-}
 
 
 @end

@@ -1,18 +1,18 @@
 #import <UIKit/UIKit.h>
-#import "Item.h"
+#import "Task.h"
 #import "TaskListViewController.h"
 #import "AddItemViewController.h"
+#import "RestKit.h"
 
-@interface DayListViewController : UITableViewController<AddItemViewControllerDelegate, TaskListViewDelegate>
-{
-    NSManagedObjectContext *managedObjectContext;
-    NSFetchedResultsController *fetchedResultsController;
+@interface DayListViewController : UITableViewController<AddItemViewControllerDelegate, TaskListViewDelegate> {
+    NSArray *tasks;
+    NSString *accessToken;
 }
 
 - (void) fetchRecords;
 - (void) taskListViewClosed;
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) NSArray *tasks;
+@property (nonatomic, retain) NSString *accessToken;
 
 @end

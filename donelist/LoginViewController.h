@@ -11,9 +11,10 @@
 #import "RestKit.h"
 #import "KeychainItemWrapper.h"
 #import "Task.h"
+#import "DayListPageViewController.h"
+#import "Constants.h"
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate> {
-    NSManagedObjectContext *managedObjectContext;
     KeychainItemWrapper *keyWrapper;
     NSString *accessToken;
 }
@@ -22,7 +23,6 @@
 - (KeychainItemWrapper *)keyWrapper;
 - (NSString *)accessToken;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) IBOutlet UITextField *usernameField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordField;
 
