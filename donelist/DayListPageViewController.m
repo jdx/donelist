@@ -15,12 +15,16 @@
     
     self.navigationItem.hidesBackButton = TRUE;
     self.dataSource = self;
+
+    RKObjectMapping *taskMapping = [RKObjectMapping mappingForClass:[Task class]];
+    [taskMapping addAttributeMappingsFromArray:@[@"title"]];
+    RKObjectMapping *dayMapping = [RKObjectMapping mappingForClass:[Day class]];
+    [dayMapping addAttributeMappingsFromArray:@[@"date"]];
+    [dayMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"tasks" toKeyPath:@"tasks" withMapping:taskMapping]];
     
-    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:[Day class]];
-    [mapping addAttributeMappingsFromArray:@[@"date", @"task"]];
     NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
     
-    RKResponseDescriptor *taskDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping pathPattern:nil keyPath:nil statusCodes:statusCodes];
+    RKResponseDescriptor *taskDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:dayMapping pathPattern:nil keyPath:nil statusCodes:statusCodes];
     
     RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:[Constants hostname]]];
     

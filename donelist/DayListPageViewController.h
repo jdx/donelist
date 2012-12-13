@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DayViewController.h"
 #import "RestKit.h"
+#import "Task.h"
 #import "Day.h"
 #import "Constants.h"
 

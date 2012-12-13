@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Day.h"
 
-@interface DayViewController : UIViewController
+@interface DayViewController : UIViewController<UITableViewDataSource>
 {
     Day *day;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (retain, nonatomic) Day *day;
+
 @end

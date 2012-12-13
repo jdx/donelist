@@ -12,10 +12,10 @@
 		E6070D51167570E200DB3697 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6070D50167570E200DB3697 /* KeychainItemWrapper.m */; };
 		E6070D5416757E2E00DB3697 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = E6070D5316757E2E00DB3697 /* Task.m */; };
 		E6078ED81676E3640063A57E /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6078ED61676E3640063A57E /* DayViewController.m */; };
-		E6078ED91676E3640063A57E /* DayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6078ED71676E3640063A57E /* DayViewController.xib */; };
 		E6078EDD1676E6160063A57E /* DayListPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6078EDC1676E6160063A57E /* DayListPageViewController.m */; };
 		E6078EE01677A7EE0063A57E /* Day.m in Sources */ = {isa = PBXBuildFile; fileRef = E6078EDF1677A7EE0063A57E /* Day.m */; };
 		E6078EE31677ABE50063A57E /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = E6078EE21677ABE50063A57E /* Constants.m */; };
+		E6078EED167A52FB0063A57E /* DayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6078EEC167A52FB0063A57E /* DayViewController.xib */; };
 		E60E00231637804D00C79812 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00221637804D00C79812 /* UIKit.framework */; };
 		E60E00251637804D00C79812 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00241637804D00C79812 /* Foundation.framework */; };
 		E60E00271637804D00C79812 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E60E00261637804D00C79812 /* CoreGraphics.framework */; };
@@ -65,13 +65,13 @@
 		E6070D5316757E2E00DB3697 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		E6078ED51676E3640063A57E /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
 		E6078ED61676E3640063A57E /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
-		E6078ED71676E3640063A57E /* DayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayViewController.xib; sourceTree = "<group>"; };
 		E6078EDB1676E6160063A57E /* DayListPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayListPageViewController.h; sourceTree = "<group>"; };
 		E6078EDC1676E6160063A57E /* DayListPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayListPageViewController.m; sourceTree = "<group>"; };
 		E6078EDE1677A7EE0063A57E /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
 		E6078EDF1677A7EE0063A57E /* Day.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Day.m; sourceTree = "<group>"; };
 		E6078EE11677ABE50063A57E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		E6078EE21677ABE50063A57E /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		E6078EEC167A52FB0063A57E /* DayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayViewController.xib; sourceTree = "<group>"; };
 		E60E001E1637804D00C79812 /* 110.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 110.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E00221637804D00C79812 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E60E00241637804D00C79812 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,7 +184,7 @@
 				E60E003A1637804E00C79812 /* MainStoryboard_iPhone.storyboard */,
 				E6078ED51676E3640063A57E /* DayViewController.h */,
 				E6078ED61676E3640063A57E /* DayViewController.m */,
-				E6078ED71676E3640063A57E /* DayViewController.xib */,
+				E6078EEC167A52FB0063A57E /* DayViewController.xib */,
 				E60E003D1637804E00C79812 /* MainStoryboard_iPad.storyboard */,
 				E60E00291637804D00C79812 /* Supporting Files */,
 				E6016C07163785CC00EA6F34 /* TaskListViewController.h */,
@@ -323,7 +323,7 @@
 				E60E003F1637804E00C79812 /* MainStoryboard_iPad.storyboard in Resources */,
 				E66E1C591639052C008F43DD /* icon2x.png in Resources */,
 				E66E1C5C16390541008F43DD /* icon57.png in Resources */,
-				E6078ED91676E3640063A57E /* DayViewController.xib in Resources */,
+				E6078EED167A52FB0063A57E /* DayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
